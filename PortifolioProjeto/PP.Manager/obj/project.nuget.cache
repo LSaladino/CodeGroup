@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "9YnCvNzc+2itKIzxoM/KKtdnw5QdHeoM8opLPzxuSk/ZqxpAxsiypc8z6Yx/YcgZ9bC0EH7c+5druwgAReqxlA==",
+  "success": true,
+  "projectFilePath": "C:\\Oficinas\\CodeGroup\\PortifolioProjeto\\PP.Manager\\PP.Manager.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Luiz\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
+    "C:\\Users\\Luiz\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
+    "C:\\Users\\Luiz\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.16\\microsoft.windowsdesktop.app.ref.6.0.16.nupkg.sha512",
+    "C:\\Users\\Luiz\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.16\\microsoft.netcore.app.ref.6.0.16.nupkg.sha512",
+    "C:\\Users\\Luiz\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.16\\microsoft.aspnetcore.app.ref.6.0.16.nupkg.sha512"
+  ],
+  "logs": []
+}

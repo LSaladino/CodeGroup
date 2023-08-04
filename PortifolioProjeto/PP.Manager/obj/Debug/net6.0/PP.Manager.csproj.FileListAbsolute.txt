@@ -1,0 +1,17 @@
+C:\Oficinas\CodeGroup\PortifolioProjeto\PP.Manager\bin\Debug\net6.0\PP.Manager.deps.json
+C:\Oficinas\CodeGroup\PortifolioProjeto\PP.Manager\bin\Debug\net6.0\PP.Manager.dll
+C:\Oficinas\CodeGroup\PortifolioProjeto\PP.Manager\bin\Debug\net6.0\PP.Manager.pdb
+C:\Oficinas\CodeGroup\PortifolioProjeto\PP.Manager\bin\Debug\net6.0\PP.Core.dll
+C:\Oficinas\CodeGroup\PortifolioProjeto\PP.Manager\bin\Debug\net6.0\PP.Core.Shared.dll
+C:\Oficinas\CodeGroup\PortifolioProjeto\PP.Manager\bin\Debug\net6.0\PP.Core.Shared.pdb
+C:\Oficinas\CodeGroup\PortifolioProjeto\PP.Manager\bin\Debug\net6.0\PP.Core.pdb
+C:\Oficinas\CodeGroup\PortifolioProjeto\PP.Manager\obj\Debug\net6.0\PP.Manager.csproj.AssemblyReference.cache
+C:\Oficinas\CodeGroup\PortifolioProjeto\PP.Manager\obj\Debug\net6.0\PP.Manager.GeneratedMSBuildEditorConfig.editorconfig
+C:\Oficinas\CodeGroup\PortifolioProjeto\PP.Manager\obj\Debug\net6.0\PP.Manager.AssemblyInfoInputs.cache
+C:\Oficinas\CodeGroup\PortifolioProjeto\PP.Manager\obj\Debug\net6.0\PP.Manager.AssemblyInfo.cs
+C:\Oficinas\CodeGroup\PortifolioProjeto\PP.Manager\obj\Debug\net6.0\PP.Manager.csproj.CoreCompileInputs.cache
+C:\Oficinas\CodeGroup\PortifolioProjeto\PP.Manager\obj\Debug\net6.0\PP.Manager.csproj.CopyComplete
+C:\Oficinas\CodeGroup\PortifolioProjeto\PP.Manager\obj\Debug\net6.0\PP.Manager.dll
+C:\Oficinas\CodeGroup\PortifolioProjeto\PP.Manager\obj\Debug\net6.0\refint\PP.Manager.dll
+C:\Oficinas\CodeGroup\PortifolioProjeto\PP.Manager\obj\Debug\net6.0\PP.Manager.pdb
+C:\Oficinas\CodeGroup\PortifolioProjeto\PP.Manager\obj\Debug\net6.0\ref\PP.Manager.dll

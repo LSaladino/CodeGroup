@@ -1,0 +1,12 @@
+C:\Oficinas\CodeGroup\PortifolioProjeto\PP.Core.Shared\bin\Debug\net6.0\PP.Core.Shared.deps.json
+C:\Oficinas\CodeGroup\PortifolioProjeto\PP.Core.Shared\bin\Debug\net6.0\PP.Core.Shared.dll
+C:\Oficinas\CodeGroup\PortifolioProjeto\PP.Core.Shared\bin\Debug\net6.0\PP.Core.Shared.pdb
+C:\Oficinas\CodeGroup\PortifolioProjeto\PP.Core.Shared\obj\Debug\net6.0\PP.Core.Shared.csproj.AssemblyReference.cache
+C:\Oficinas\CodeGroup\PortifolioProjeto\PP.Core.Shared\obj\Debug\net6.0\PP.Core.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Oficinas\CodeGroup\PortifolioProjeto\PP.Core.Shared\obj\Debug\net6.0\PP.Core.Shared.AssemblyInfoInputs.cache
+C:\Oficinas\CodeGroup\PortifolioProjeto\PP.Core.Shared\obj\Debug\net6.0\PP.Core.Shared.AssemblyInfo.cs
+C:\Oficinas\CodeGroup\PortifolioProjeto\PP.Core.Shared\obj\Debug\net6.0\PP.Core.Shared.csproj.CoreCompileInputs.cache
+C:\Oficinas\CodeGroup\PortifolioProjeto\PP.Core.Shared\obj\Debug\net6.0\PP.Core.Shared.dll
+C:\Oficinas\CodeGroup\PortifolioProjeto\PP.Core.Shared\obj\Debug\net6.0\refint\PP.Core.Shared.dll
+C:\Oficinas\CodeGroup\PortifolioProjeto\PP.Core.Shared\obj\Debug\net6.0\PP.Core.Shared.pdb
+C:\Oficinas\CodeGroup\PortifolioProjeto\PP.Core.Shared\obj\Debug\net6.0\ref\PP.Core.Shared.dll
