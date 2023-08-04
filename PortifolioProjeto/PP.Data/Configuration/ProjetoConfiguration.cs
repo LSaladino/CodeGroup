@@ -21,10 +21,10 @@ namespace PP.Data.Configuration
             builder.Property(p => p.Risco).HasColumnName("risco");
             builder.Property(p => p.PessoaId).HasColumnName("idgerente");
 
-            builder.HasOne(x => x.Pessoa)
-                  .WithMany(x => x.Projeto)
-                  .HasForeignKey(x => x.PessoaId)
-                  .HasConstraintName("fk_gerente");
+            //builder.HasOne(x => x.Pessoa)
+            //      .WithMany(x => x.Projetos)
+            //      .HasForeignKey(x => x.PessoaId)
+            //      .HasConstraintName("fk_gerente");
 
         }
     }

@@ -13,10 +13,7 @@ namespace PP.Core.Domain
         public string? Status { get; set; }
         public double Orcamento { get; set; }
         public string? Risco { get; set; }
-
-        //[ForeignKey("PessoaId")]
         public int PessoaId { get; set; }
         public virtual Pessoa? Pessoa { get; set; }
-        //public Pessoa? Pessoa { get; set; }
     }
 }

@@ -14,10 +14,11 @@ namespace PP.Data.Configuration
             builder.Property(p => p.PessoaId).HasColumnName("idpessoa");
             builder.HasKey(p => p.Id).HasName("pk_membros_projeto");
 
-            builder.HasOne(x => x.Pessoa)
-                .WithMany(x => x.Membro)
-                .HasForeignKey(x => x.PessoaId)
-                .HasConstraintName("fk_membros_pessoa");
+            //builder.HasOne(x => x.Pessoa)
+            //    .WithMany(x => x.Membros)
+            //    .HasForeignKey(x => x.PessoaId)
+            //    .HasConstraintName("fk_membros_pessoa");
+
         }
     }
 }
