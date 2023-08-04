@@ -6,7 +6,7 @@
         public string? Nome { get; set; }
         public DateTime DataNascimento { get; set; }
         public string? CPF { get; set; }
-        public bool IsFuncionario { get; set; } 
+        public bool IsFuncionario { get; set; }
         public ICollection<Membro>? Membro { get; set; }
         public ICollection<Projeto>? Projeto { get; set; }
     }

@@ -35,7 +35,8 @@ namespace PP.Data.Migrations
                         .HasColumnType("integer")
                         .HasColumnName("idpessoa");
 
-                    b.HasKey("Id");
+                    b.HasKey("Id")
+                        .HasName("pk_membros_projeto");
 
                     b.HasIndex("PessoaId");
 

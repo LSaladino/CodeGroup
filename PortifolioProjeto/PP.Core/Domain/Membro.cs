@@ -7,7 +7,8 @@ namespace PP.Core.Domain
         public int Id { get; set; }
 
         public int PessoaId  { get; set;}
-        [ForeignKey("PessoaId")]
-        public virtual Pessoa? Pessoa { get; set;}
+        //[ForeignKey("PessoaId")]
+        public virtual Pessoa? Pessoa { get; set; }
+        //public Pessoa? Pessoa { get; set; }
     }
 }

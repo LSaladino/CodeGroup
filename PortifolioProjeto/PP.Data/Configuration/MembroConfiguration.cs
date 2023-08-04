@@ -12,6 +12,7 @@ namespace PP.Data.Configuration
             builder.ToTable("membros");
             builder.Property(p => p.Id).HasColumnName("idprojeto");
             builder.Property(p => p.PessoaId).HasColumnName("idpessoa");
+            builder.HasKey(p => p.Id).HasName("pk_membros_projeto");
 
             builder.HasOne(x => x.Pessoa)
                 .WithMany(x => x.Membro)
