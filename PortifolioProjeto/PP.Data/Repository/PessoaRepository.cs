@@ -27,7 +27,7 @@ namespace PP.Data.Repository
 
         public async Task<Pessoa> GetPessoaAsync(int id)
         {
-            return await context.Pessoas.SingleOrDefaultAsync(p => p.Id == id); 
+            return await context.Pessoas.SingleOrDefaultAsync(p => p.PessoaId == id); 
         }
 
         public async Task<IEnumerable<Pessoa>> GetPessoasAsync()
@@ -45,7 +45,7 @@ namespace PP.Data.Repository
         public async Task<Pessoa> UpdatePessoaAsync(Pessoa pessoa)
         {
             // first, exec a search to verify if exists into database
-            var pessoaConsultada = await context.Pessoas.FindAsync(pessoa.Id);
+            var pessoaConsultada = await context.Pessoas.FindAsync(pessoa.PessoaId);
 
             if(pessoaConsultada == null)
             {

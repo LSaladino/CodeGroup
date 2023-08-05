@@ -1,9 +1,15 @@
-﻿namespace PP.Core.Domain
+﻿using System.ComponentModel.DataAnnotations.Schema;
+
+namespace PP.Core.Domain
 {
     public class Membro
     {
-        public int Id { get; set; }
-        public int PessoaId  { get; set;}
-        public virtual Pessoa? Pessoa { get; set; }
+        [NotMapped]
+        public int MembroId { get; set; }   
+        public int ProjetoId { get; set; }  
+        public Projeto? Projeto { get; set; }
+        public int PessoaId { get; set; }   
+        public Pessoa? Pessoa { get; set; }     
+        
     }
 }

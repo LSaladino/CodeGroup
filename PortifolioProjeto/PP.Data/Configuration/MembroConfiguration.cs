@@ -10,15 +10,11 @@ namespace PP.Data.Configuration
         public void Configure(EntityTypeBuilder<Membro> builder)
         {
             builder.ToTable("membros");
-            builder.Property(p => p.Id).HasColumnName("idprojeto");
             builder.Property(p => p.PessoaId).HasColumnName("idpessoa");
-            builder.HasKey(p => p.Id).HasName("pk_membros_projeto");
-
-            //builder.HasOne(x => x.Pessoa)
-            //    .WithMany(x => x.Membros)
-            //    .HasForeignKey(x => x.PessoaId)
-            //    .HasConstraintName("fk_membros_pessoa");
-
+            builder.Property(p => p.ProjetoId).HasColumnName("idprojeto");
+            builder.HasKey(p => p.ProjetoId).HasName("pk_membros_projeto");
+                
+            
         }
     }
 }

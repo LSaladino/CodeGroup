@@ -10,7 +10,10 @@ namespace PP.Data.Configuration
        public void Configure(EntityTypeBuilder<Projeto> builder)
         {
             builder.ToTable("projeto");
-            builder.Property(p => p.Id).HasColumnName("id");
+
+            builder.HasKey(x => x.ProjetoId).HasName("pk_projeto");
+
+            builder.Property(p => p.ProjetoId).HasColumnName("id");
             builder.Property(p => p.Nome).HasColumnName("nome");
             builder.Property(p => p.DataInicio).HasColumnName("data_inicio");
             builder.Property(p => p.DataPrevisaoFim).HasColumnName("data_previsao_fim");
@@ -21,10 +24,10 @@ namespace PP.Data.Configuration
             builder.Property(p => p.Risco).HasColumnName("risco");
             builder.Property(p => p.PessoaId).HasColumnName("idgerente");
 
-            //builder.HasOne(x => x.Pessoa)
-            //      .WithMany(x => x.Projetos)
-            //      .HasForeignKey(x => x.PessoaId)
-            //      .HasConstraintName("fk_gerente");
+            builder.HasOne(x => x.Pessoa)
+                  .WithMany(x => x.Projetos)
+                  .HasForeignKey(x => x.PessoaId)
+                  .HasConstraintName("fk_gerente");
 
         }
     }

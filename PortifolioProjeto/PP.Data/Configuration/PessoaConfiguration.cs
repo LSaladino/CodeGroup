@@ -9,13 +9,14 @@ namespace PP.Data.Configuration
         public void Configure(EntityTypeBuilder<Pessoa> builder)
         {
             builder.ToTable("pessoa");
+            builder.HasKey(p => p.PessoaId).HasName("pk_pessoa");
 
-            builder.Property(p => p.Id).HasColumnName("id");
+            builder.Property(p => p.PessoaId).HasColumnName("id");
             builder.Property(p => p.Nome).HasColumnName("nome");
             builder.Property(p => p.DataNascimento).HasColumnName("datanascimento");
             builder.Property(p => p.CPF).HasColumnName("cpf");
             builder.Property(p => p.IsFuncionario).HasColumnName("funcionario");
-            
+
         }
     }
 }
