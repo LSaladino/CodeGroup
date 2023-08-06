@@ -4,9 +4,9 @@ namespace PP.Manager.Interfaces.Repositories
 {
     public interface IPessoaRepository
     {
-        Task<Pessoa> DeletePessoaAsync(int id);
+        Task<Pessoa> DeletePessoaByIdAsync(int id); 
 
-        Task<Pessoa> GetPessoaAsync(int id);
+        Task<Pessoa> GetPessoaByIdAsync(int id);    
 
         Task<IEnumerable<Pessoa>> GetPessoasAsync();
 

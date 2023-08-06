@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using PP.Core.Domain;
 using PP.Core.Shared.ModelViews.Projeto;
 using PP.Manager.Interfaces.Managers;
 
@@ -35,7 +36,7 @@ namespace PP.WebApi.Controllers
         [HttpGet("{id}")]
         public async Task<IActionResult> Get(int id)
         {
-            var projeto = await _projetoManager.GetProjetoAsync(id);
+            var projeto = await _projetoManager.GetProjetoByIdAsync(id);
             if(projeto.ProjetoId == 0)
             {
                 return NotFound();
@@ -69,7 +70,7 @@ namespace PP.WebApi.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(int id)
         {
-            var projetoExcluido = await _projetoManager.DeleteProjetoAsync(id);
+            var projetoExcluido = await _projetoManager.DeleteProjetoByIdAsync(id);
             if (projetoExcluido == null)
             {
                 return NotFound();

@@ -33,7 +33,7 @@ namespace PP.WebApi.Controllers
         [HttpGet("{id}")]
         public async Task<IActionResult> Get(int id)
         {
-            var pessoa = await pessoaManager.GetPessoaAsync(id);
+            var pessoa = await pessoaManager.GetPessoaByIdAsync(id);
             if (pessoa.PessoaId == 0)
             {
                 return NotFound();
@@ -67,7 +67,7 @@ namespace PP.WebApi.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(int id)
         {
-            var pessoaExcluida = await pessoaManager.DeletePessoaAsync(id);
+            var pessoaExcluida = await pessoaManager.DeletePessoaByIdAsync(id);
             if (pessoaExcluida == null)
             {
                 return NotFound();

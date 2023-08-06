@@ -14,7 +14,7 @@ namespace PP.Data.Repository
             _myDataContext = myDataContext;
         }
 
-        public async Task<Projeto> DeleteProjetoAsync(int id)
+        public async Task<Projeto> DeleteProjetoByIdAsync(int id)
         {
             var projetoPesquisado = await _myDataContext.Projetos.SingleOrDefaultAsync(p => p.ProjetoId == id); 
             if(projetoPesquisado == null)
@@ -28,9 +28,10 @@ namespace PP.Data.Repository
             return projetoRemovido.Entity;
         }
 
-        public async Task<Projeto> GetProjetoAsync(int id)
+        public async Task<Projeto> GetProjetoByIdAsync(int id)
         {
-            return await _myDataContext.Projetos.SingleOrDefaultAsync(p => p.PessoaId == id);
+            var projeto = await _myDataContext.Projetos.FindAsync(id);
+            return projeto;
         }
 
         public async Task<IEnumerable<Projeto>> GetProjetosAsync()

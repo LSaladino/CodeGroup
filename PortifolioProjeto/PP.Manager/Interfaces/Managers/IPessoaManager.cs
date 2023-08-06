@@ -4,9 +4,9 @@ namespace PP.Manager.Interfaces.Managers
 {
     public interface IPessoaManager
     {
-        Task<PessoaView> DeletePessoaAsync(int id);
+        Task<PessoaView> DeletePessoaByIdAsync(int id);
 
-        Task<PessoaView> GetPessoaAsync(int id);
+        Task<PessoaView> GetPessoaByIdAsync(int id);
 
         Task<IEnumerable<PessoaView>> GetPessoasAsync();
 

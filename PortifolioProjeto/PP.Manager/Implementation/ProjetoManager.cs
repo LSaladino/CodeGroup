@@ -17,15 +17,15 @@ namespace PP.Manager.Implementation
             _mapper = mapper;
         }
 
-        public async Task<ProjetoView> DeleteProjetoAsync(int id)
+        public async Task<ProjetoView> DeleteProjetoByIdAsync(int id)
         {
-            var projetoExcluido = await _projetoRepository.DeleteProjetoAsync(id);
+            var projetoExcluido = await _projetoRepository.DeleteProjetoByIdAsync(id);
             return _mapper.Map<ProjetoView>(projetoExcluido);
         }
 
-        public async Task<ProjetoView> GetProjetoAsync(int id)
+        public async Task<ProjetoView> GetProjetoByIdAsync(int id)
         {
-            var projeto = await _projetoRepository.GetProjetoAsync(id);
+            var projeto = await _projetoRepository.GetProjetoByIdAsync(id);
             return _mapper.Map<Projeto,  ProjetoView>(projeto);
         }
 

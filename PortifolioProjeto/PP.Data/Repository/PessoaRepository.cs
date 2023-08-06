@@ -12,7 +12,7 @@ namespace PP.Data.Repository
         {
             this.context = context;
         }
-        public async Task<Pessoa> DeletePessoaAsync(int id)
+        public async Task<Pessoa> DeletePessoaByIdAsync(int id)
         {
 
             var pessoaPesquisada = await context.Pessoas.FindAsync(id);
@@ -25,7 +25,7 @@ namespace PP.Data.Repository
             return pessoaRemovida.Entity;
         }
 
-        public async Task<Pessoa> GetPessoaAsync(int id)
+        public async Task<Pessoa> GetPessoaByIdAsync(int id)
         {
             return await context.Pessoas.SingleOrDefaultAsync(p => p.PessoaId == id); 
         }

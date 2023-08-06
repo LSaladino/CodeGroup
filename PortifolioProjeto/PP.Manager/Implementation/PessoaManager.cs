@@ -17,16 +17,16 @@ namespace PP.Manager.Implementation
             this.mapper = mapper;
         }
 
-        public async Task<PessoaView> DeletePessoaAsync(int id)
+        public async Task<PessoaView> DeletePessoaByIdAsync(int id)
         {
-            var pessoaExcluida = await pessoaRepository.DeletePessoaAsync(id);
+            var pessoaExcluida = await pessoaRepository.DeletePessoaByIdAsync(id);
             return mapper.Map<PessoaView>(pessoaExcluida);
 
         }
 
-        public async Task<PessoaView> GetPessoaAsync(int id)
+        public async Task<PessoaView> GetPessoaByIdAsync(int id)
         {
-            var pessoa = await pessoaRepository.GetPessoaAsync(id);
+            var pessoa = await pessoaRepository.GetPessoaByIdAsync(id);
             return mapper.Map<PessoaView>(pessoa);
         }
 

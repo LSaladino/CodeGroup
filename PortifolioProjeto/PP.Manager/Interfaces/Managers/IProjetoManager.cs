@@ -4,9 +4,9 @@ namespace PP.Manager.Interfaces.Managers
 {
     public interface IProjetoManager
     {
-        Task<ProjetoView> DeleteProjetoAsync(int id);
+        Task<ProjetoView> DeleteProjetoByIdAsync(int id);
 
-        Task<ProjetoView> GetProjetoAsync(int id);
+        Task<ProjetoView> GetProjetoByIdAsync(int id);
 
         Task<IEnumerable<ProjetoView>> GetProjetosAsync();
 
