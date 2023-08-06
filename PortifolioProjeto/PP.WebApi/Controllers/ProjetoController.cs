@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using PP.Core.Shared.ModelViews.Projeto;
-using PP.Manager.Implementation;
 using PP.Manager.Interfaces.Managers;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -50,7 +49,7 @@ namespace PP.WebApi.Controllers
         public async Task<IActionResult> Post(NovoProjeto novoProjeto)
         {
             var projetoInserido = await _projetoManager.InsertProjetoAsync(novoProjeto);
-            return CreatedAtAction(nameof(Get), new { id = projetoInserido.ProjetoId }, projetoInserido);
+            return CreatedAtAction(nameof(Get), new { projetoId = projetoInserido.ProjetoId }, projetoInserido);    
         }
 
         // PUT api/<ProjetoController>/5

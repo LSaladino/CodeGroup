@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace PP.Core.Shared.ModelViews.Projeto
+﻿namespace PP.Core.Shared.ModelViews.Projeto
 {
     public class ProjetoView
     {
@@ -17,6 +11,7 @@ namespace PP.Core.Shared.ModelViews.Projeto
         public string? Status { get; set; }
         public double Orcamento { get; set; }
         public string? Risco { get; set; }
-       
+        public int PessoaId { get; set; }
+
     }
 }

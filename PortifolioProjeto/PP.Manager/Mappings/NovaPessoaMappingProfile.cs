@@ -9,7 +9,7 @@ namespace PP.Manager.Mappings
         public NovaPessoaMappingProfile()
         {
             CreateMap<NovaPessoa, Pessoa>();
-            CreateMap<Pessoa, PessoaView>();    
+            CreateMap<Pessoa, PessoaView>();
         }
     }
 }

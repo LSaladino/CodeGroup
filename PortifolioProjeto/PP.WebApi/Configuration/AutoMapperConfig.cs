@@ -7,8 +7,10 @@ namespace PP.WebApi.Configuration
         {
             services.AddAutoMapper(
             typeof(NovaPessoaMappingProfile),
-            typeof(AlteraPessoaMappingProfile));
-            //typeof(UsuarioMappingProfile));
+            typeof(AlteraPessoaMappingProfile),
+            typeof(NovoProjetoMappingProfile),
+            typeof(AlteraProjetoMappingProfile)
+            );
         }
     }
 }

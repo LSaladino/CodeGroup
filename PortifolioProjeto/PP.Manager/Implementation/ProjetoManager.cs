@@ -46,8 +46,8 @@ namespace PP.Manager.Implementation
         public async Task<ProjetoView> UpdateProjetoAsync(AtualizaProjeto atualizaProjeto)
         {
             var projeto = _mapper.Map<Projeto>(atualizaProjeto);
-            projeto = await _projetoRepository.UpdateProjetoAsync(projeto);
-            return _mapper.Map<ProjetoView>(projeto);
+            //projeto = await _projetoRepository.UpdateProjetoAsync(projeto);
+            return _mapper.Map<ProjetoView>(await _projetoRepository.UpdateProjetoAsync(projeto));
         }
     }
 }

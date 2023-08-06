@@ -1,7 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using PP.Core.Domain;
-using System.Reflection.Emit;
 
 namespace PP.Data.Configuration
 {

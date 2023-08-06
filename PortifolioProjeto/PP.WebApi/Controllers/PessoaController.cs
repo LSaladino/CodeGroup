@@ -34,7 +34,7 @@ namespace PP.WebApi.Controllers
         public async Task<IActionResult> Get(int id)
         {
             var pessoa = await pessoaManager.GetPessoaAsync(id);
-            if (pessoa.Id == 0)
+            if (pessoa.PessoaId == 0)
             {
                 return NotFound();
             }
@@ -46,7 +46,7 @@ namespace PP.WebApi.Controllers
         public async Task<IActionResult> Post(NovaPessoa novaPessoa)
         {
             var pessoaInserida = await pessoaManager.InsertPessoaAsync(novaPessoa);
-            return CreatedAtAction(nameof(Get), new { id = pessoaInserida.Id }, pessoaInserida);
+            return CreatedAtAction(nameof(Get), new { pessoaId = pessoaInserida.PessoaId }, pessoaInserida);    
         }
 
         // PUT api/<PessoaController>/5

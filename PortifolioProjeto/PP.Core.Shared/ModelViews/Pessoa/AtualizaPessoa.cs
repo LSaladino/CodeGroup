@@ -2,6 +2,6 @@
 {
     public class AtualizaPessoa : NovaPessoa
     {
-        public int Id { get; set; }
+        public int PessoaId { get; set; }   
     }
 }

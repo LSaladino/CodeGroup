@@ -1,10 +1,4 @@
-﻿using PP.Core.Shared.ModelViews.Membro;
-using PP.Core.Shared.ModelViews.Pessoa;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using PP.Core.Shared.ModelViews.Pessoa;
 
 namespace PP.Core.Shared.ModelViews.Projeto
 {
@@ -20,6 +14,6 @@ namespace PP.Core.Shared.ModelViews.Projeto
         public string? Risco { get; set; }
         public int PessoaId { get; set; }
         public NovaPessoa? Pessoa { get; set; }
-        public NovoMembro? Membro { get; set; }
+        //public NovoMembro? Membro { get; set; }
     }
 }

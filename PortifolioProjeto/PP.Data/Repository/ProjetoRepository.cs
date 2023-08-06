@@ -47,7 +47,7 @@ namespace PP.Data.Repository
 
         public async Task<Projeto> UpdateProjetoAsync(Projeto projeto)
         {
-            var projetoPesquisado = await _myDataContext.Projetos.FindAsync(projeto);
+            var projetoPesquisado = await _myDataContext.Projetos.SingleOrDefaultAsync(p => p.ProjetoId == projeto.ProjetoId);
             if(projetoPesquisado == null)
             {
                 return null;
