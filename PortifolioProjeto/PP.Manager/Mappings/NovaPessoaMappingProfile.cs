@@ -8,8 +8,10 @@ namespace PP.Manager.Mappings
     {
         public NovaPessoaMappingProfile()
         {
+            //        de          para
             CreateMap<NovaPessoa, Pessoa>();
             CreateMap<Pessoa, PessoaView>();
+            CreateMap<Pessoa, PessoaTwoFieldsView>();
         }
     }
 }

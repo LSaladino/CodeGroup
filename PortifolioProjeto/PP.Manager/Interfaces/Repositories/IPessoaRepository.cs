@@ -10,6 +10,9 @@ namespace PP.Manager.Interfaces.Repositories
 
         Task<IEnumerable<Pessoa>> GetPessoasAsync();
 
+        Task<IEnumerable<Pessoa>> GetPessoasTwoFieldsAsync();
+        Task<Pessoa> GetPessoasTwoFieldsByIdAsync(int id);   
+
         Task<Pessoa> InsertPessoaAsync(Pessoa pessoa);
 
         Task<Pessoa> UpdatePessoaAsync(Pessoa pessoa);

@@ -36,6 +36,18 @@ namespace PP.Manager.Implementation
             return mapper.Map<IEnumerable<Pessoa>, IEnumerable<PessoaView>>(pessoas);
         }
 
+        public async Task<IEnumerable<PessoaTwoFieldsView>> GetPessoasTwoFieldsAsync()
+        {
+            var pessoas = await pessoaRepository!.GetPessoasTwoFieldsAsync();
+            return mapper.Map<IEnumerable<Pessoa>, IEnumerable<PessoaTwoFieldsView>>(pessoas);
+        }
+
+        public async Task<PessoaTwoFieldsView> GetPessoasTwoFieldsByIdAsync(int id)
+        {
+            var pessoas = await pessoaRepository!.GetPessoasTwoFieldsByIdAsync(id);
+            return mapper.Map<Pessoa, PessoaTwoFieldsView>(pessoas);
+        }
+
         public async Task<PessoaView> InsertPessoaAsync(NovaPessoa novaPessoa)
         {
             var pessoa = mapper.Map<Pessoa>(novaPessoa);

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "bejJZYOir5KMoSlBg4oTkyD9N4YtlATzuI7Wk0I3RLh2f+W8uLei805EM6krcPq49uEAf6acuhu0XazPfpu8kw==",
+  "dgSpecHash": "rQhIvtw6RU0oaBWldw+TGqnWEN/5s51X8n5NTHIQjEfWm+J9AozN/rBHYtaqaJOXQ1esldFOCILf4vVbZopHzQ==",
   "success": true,
-  "projectFilePath": "C:\\Oficinas\\CodeGroup\\PortifolioProjeto\\PP.Data\\PP.Data.csproj",
+  "projectFilePath": "C:\\Oficinas\\CodeGroup\\portifolioprojeto\\PP.Data\\PP.Data.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Luiz\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\Luiz\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
@@ -27,8 +27,8 @@
     "C:\\Users\\Luiz\\.nuget\\packages\\system.collections.immutable\\6.0.0\\system.collections.immutable.6.0.0.nupkg.sha512",
     "C:\\Users\\Luiz\\.nuget\\packages\\system.diagnostics.diagnosticsource\\6.0.1\\system.diagnostics.diagnosticsource.6.0.1.nupkg.sha512",
     "C:\\Users\\Luiz\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
-    "C:\\Users\\Luiz\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.16\\microsoft.windowsdesktop.app.ref.6.0.16.nupkg.sha512",
     "C:\\Users\\Luiz\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.16\\microsoft.netcore.app.ref.6.0.16.nupkg.sha512",
+    "C:\\Users\\Luiz\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.16\\microsoft.windowsdesktop.app.ref.6.0.16.nupkg.sha512",
     "C:\\Users\\Luiz\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.16\\microsoft.aspnetcore.app.ref.6.0.16.nupkg.sha512"
   ],
   "logs": []

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Oficinas\\CodeGroup\\PortifolioProjeto\\PP.Manager\\PP.Manager.csproj": {}
+    "C:\\Oficinas\\CodeGroup\\portifolioprojeto\\PP.Manager\\PP.Manager.csproj": {}
   },
   "projects": {
-    "C:\\Oficinas\\CodeGroup\\PortifolioProjeto\\PP.Core.Shared\\PP.Core.Shared.csproj": {
+    "C:\\Oficinas\\CodeGroup\\portifolioprojeto\\PP.Core.Shared\\PP.Core.Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Oficinas\\CodeGroup\\PortifolioProjeto\\PP.Core.Shared\\PP.Core.Shared.csproj",
+        "projectUniqueName": "C:\\Oficinas\\CodeGroup\\portifolioprojeto\\PP.Core.Shared\\PP.Core.Shared.csproj",
         "projectName": "PP.Core.Shared",
-        "projectPath": "C:\\Oficinas\\CodeGroup\\PortifolioProjeto\\PP.Core.Shared\\PP.Core.Shared.csproj",
+        "projectPath": "C:\\Oficinas\\CodeGroup\\portifolioprojeto\\PP.Core.Shared\\PP.Core.Shared.csproj",
         "packagesPath": "C:\\Users\\Luiz\\.nuget\\packages\\",
-        "outputPath": "C:\\Oficinas\\CodeGroup\\PortifolioProjeto\\PP.Core.Shared\\obj\\",
+        "outputPath": "C:\\Oficinas\\CodeGroup\\portifolioprojeto\\PP.Core.Shared\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -78,14 +78,14 @@
         }
       }
     },
-    "C:\\Oficinas\\CodeGroup\\PortifolioProjeto\\PP.Core\\PP.Core.csproj": {
+    "C:\\Oficinas\\CodeGroup\\portifolioprojeto\\PP.Core\\PP.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Oficinas\\CodeGroup\\PortifolioProjeto\\PP.Core\\PP.Core.csproj",
+        "projectUniqueName": "C:\\Oficinas\\CodeGroup\\portifolioprojeto\\PP.Core\\PP.Core.csproj",
         "projectName": "PP.Core",
-        "projectPath": "C:\\Oficinas\\CodeGroup\\PortifolioProjeto\\PP.Core\\PP.Core.csproj",
+        "projectPath": "C:\\Oficinas\\CodeGroup\\portifolioprojeto\\PP.Core\\PP.Core.csproj",
         "packagesPath": "C:\\Users\\Luiz\\.nuget\\packages\\",
-        "outputPath": "C:\\Oficinas\\CodeGroup\\PortifolioProjeto\\PP.Core\\obj\\",
+        "outputPath": "C:\\Oficinas\\CodeGroup\\portifolioprojeto\\PP.Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -152,14 +152,14 @@
         }
       }
     },
-    "C:\\Oficinas\\CodeGroup\\PortifolioProjeto\\PP.Manager\\PP.Manager.csproj": {
+    "C:\\Oficinas\\CodeGroup\\portifolioprojeto\\PP.Manager\\PP.Manager.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Oficinas\\CodeGroup\\PortifolioProjeto\\PP.Manager\\PP.Manager.csproj",
+        "projectUniqueName": "C:\\Oficinas\\CodeGroup\\portifolioprojeto\\PP.Manager\\PP.Manager.csproj",
         "projectName": "PP.Manager",
-        "projectPath": "C:\\Oficinas\\CodeGroup\\PortifolioProjeto\\PP.Manager\\PP.Manager.csproj",
+        "projectPath": "C:\\Oficinas\\CodeGroup\\portifolioprojeto\\PP.Manager\\PP.Manager.csproj",
         "packagesPath": "C:\\Users\\Luiz\\.nuget\\packages\\",
-        "outputPath": "C:\\Oficinas\\CodeGroup\\PortifolioProjeto\\PP.Manager\\obj\\",
+        "outputPath": "C:\\Oficinas\\CodeGroup\\portifolioprojeto\\PP.Manager\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -181,11 +181,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Oficinas\\CodeGroup\\PortifolioProjeto\\PP.Core.Shared\\PP.Core.Shared.csproj": {
-                "projectPath": "C:\\Oficinas\\CodeGroup\\PortifolioProjeto\\PP.Core.Shared\\PP.Core.Shared.csproj"
+              "C:\\Oficinas\\CodeGroup\\portifolioprojeto\\PP.Core.Shared\\PP.Core.Shared.csproj": {
+                "projectPath": "C:\\Oficinas\\CodeGroup\\portifolioprojeto\\PP.Core.Shared\\PP.Core.Shared.csproj"
               },
-              "C:\\Oficinas\\CodeGroup\\PortifolioProjeto\\PP.Core\\PP.Core.csproj": {
-                "projectPath": "C:\\Oficinas\\CodeGroup\\PortifolioProjeto\\PP.Core\\PP.Core.csproj"
+              "C:\\Oficinas\\CodeGroup\\portifolioprojeto\\PP.Core\\PP.Core.csproj": {
+                "projectPath": "C:\\Oficinas\\CodeGroup\\portifolioprojeto\\PP.Core\\PP.Core.csproj"
               }
             }
           }

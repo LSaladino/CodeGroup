@@ -2,5 +2,7 @@
 {
     public class MembroView
     {
+        //public int ProjetoId { get; set; }
+        public int PessoaId { get; set; }
     }
 }

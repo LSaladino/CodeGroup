@@ -1,0 +1,219 @@
+<div class="row" style="margin-left: 2px;margin-right: 2px;">
+    <div class="col-sm-4" *ngIf="projetoSelecionado">
+
+        <div class="row">
+            <div class="mr-auto">
+                <app-titulo
+                    [p_titulo_componente]="projetoSelecionado.projetoId == 0 ? 'Novo projeto': 'ID: '+ projetoSelecionado.projetoId + ' - ' + 'Nome: ' + projetoSelecionado.nome"></app-titulo>
+            </div>
+            <div class="mt-1" style="text-align: right;">
+                <button class="btn btn-outline-danger" (click)="Voltar()">Fechar</button>
+            </div>
+        </div>
+
+        <form [formGroup]="frmProjeto" (ngSubmit)="EnviaProjeto()">
+
+            <!-- NOME -->
+            <div class="form-group">
+                <label for="lblNome">Nome</label>
+                <input type="text" class="form-control" formControlName="nome"
+                    [ngClass]="{'is-invalid':p_submitted && frmProjeto.controls['nome'].errors}">
+
+                <div *ngIf="p_submitted && frmProjeto.controls['nome'].errors" class="text-danger">
+                    <div *ngIf="p_submitted && frmProjeto.controls['nome'].errors['required']">
+                        [Nome] é obrigatório !
+                    </div>
+                    <div *ngIf="p_submitted && frmProjeto.controls['nome'].errors['minlength']">
+                        [Nome] deve ter no mínimo 10 caracteres !
+                    </div>
+                </div>
+            </div>
+
+            <!-- DESCRIÇÃO -->
+            <div class="form-group">
+                <label for="lblDescricao">Descrição</label>
+                <input type="text" class="form-control" formControlName="descricao"
+                    [ngClass]="{'is-invalid':p_submitted && frmProjeto.controls['descricao'].errors}">
+
+                <div *ngIf="p_submitted && frmProjeto.controls['descricao'].errors" class="text-danger">
+                    <div *ngIf="p_submitted && frmProjeto.controls['descricao'].errors['required']">
+                        [Descrição] é obrigatório !
+                    </div>
+                    <div *ngIf="p_submitted && frmProjeto.controls['descricao'].errors['minlength']">
+                        [Descrição] deve ter no mínimo 10 caracteres !
+                    </div>
+                </div>
+            </div>
+
+            <!-- STATUS -->
+            <div class="form-group">
+                <label for="lblStatus">Status</label>
+                <input type="text" class="form-control" formControlName="status"
+                    [ngClass]="{'is-invalid':p_submitted && frmProjeto.controls['status'].errors}">
+
+                <div *ngIf="p_submitted && frmProjeto.controls['status'].errors" class="text-danger">
+                    <div *ngIf="p_submitted && frmProjeto.controls['status'].errors['required']">
+                        [Status] é obrigatório !
+                    </div>
+                    <div *ngIf="p_submitted && frmProjeto.controls['status'].errors['minlength']">
+                        [Status] deve ter no mínimo 10 caracteres !
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- ORÇAMENTO -->
+            <div class="form-group">
+                <label for="lblOrcamento">Orçamento</label>
+                <input type="text" class="form-control" formControlName="orcamento"
+                    [ngClass]="{'is-invalid':p_submitted && frmProjeto.controls['orcamento'].errors}">
+
+                <div *ngIf="p_submitted && frmProjeto.controls['orcamento'].errors" class="text-danger">
+                    <div *ngIf="p_submitted && frmProjeto.controls['orcamento'].errors['required']">
+                        [Orçamento] é obrigatório !
+                    </div>
+                    <div *ngIf="p_submitted && frmProjeto.controls['orcamento'].errors['minlength']">
+                        [Orçamento] deve ter no mínimo 10 caracteres !
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- RISCO -->
+            <div class="form-group">
+                <label for="lblRisco">Risco</label>
+                <input type="text" class="form-control" formControlName="risco"
+                    [ngClass]="{'is-invalid':p_submitted && frmProjeto.controls['risco'].errors}">
+
+                <div *ngIf="p_submitted && frmProjeto.controls['risco'].errors" class="text-danger">
+                    <div *ngIf="p_submitted && frmProjeto.controls['risco'].errors['required']">
+                        [Risco] é obrigatório !
+                    </div>
+                    <div *ngIf="p_submitted && frmProjeto.controls['risco'].errors['minlength']">
+                        [Risco] deve ter no mínimo 10 caracteres !
+                    </div>
+                </div>
+            </div>
+
+            <!-- DATA INICIO -->
+            <br>
+            <div class="form-group">
+                <mat-form-field color="accent" appearance="outline">
+                    <mat-label>Data de Inicio ?</mat-label>
+                    <input matInput [matDatepicker]="picker1" formControlName="dataInicio" name="dataInicio">
+                    <mat-hint></mat-hint>
+                    <mat-datepicker-toggle matIconSuffix [for]="picker1"></mat-datepicker-toggle>
+                    <mat-datepicker #picker1></mat-datepicker>
+                </mat-form-field>
+
+                <!-- LISTAGEM GERENTES -->
+                <div>
+                    <mat-form-field>
+                        <mat-label>Gerentes</mat-label>
+                        <mat-select disableRipple [(value)]="selectedGerentes">
+
+                            <!-- <mat-option value={{listagemGerentesOne}}></mat-option> -->
+
+                            <!-- <div *ngIf="!isUpdateMode">
+                                <mat-option *ngFor="let gerenteItem of listagemGerentes"
+                                    [value]="gerenteItem">{{gerenteItem.nome}}
+                                </mat-option>
+                            </div> -->
+
+                            <mat-option *ngFor="let gerenteItem of listagemGerentes"
+                                [value]="gerenteItem">{{gerenteItem.nome}}
+                            </mat-option>
+
+                        </mat-select>
+                    </mat-form-field>
+
+                </div>
+
+                {{selectedGerentes | json}}
+
+
+            </div>
+
+            <!-- DATA PREVISAO FIM -->
+            <br>
+            <div class="form-group">
+                <mat-form-field color="accent" appearance="outline">
+                    <mat-label>Data prevista fim ?</mat-label>
+                    <input matInput [matDatepicker]="picker2" formControlName="dataPrevisaoFim" name="dataPrevisaoFim">
+                    <mat-hint></mat-hint>
+                    <mat-datepicker-toggle matIconSuffix [for]="picker2"></mat-datepicker-toggle>
+                    <mat-datepicker #picker2></mat-datepicker>
+                </mat-form-field>
+            </div>
+
+            <!-- DATA FIM -->
+            <br>
+            <div class="form-group">
+                <mat-form-field color="accent" appearance="outline">
+                    <mat-label>Data final ?</mat-label>
+                    <input matInput [matDatepicker]="picker3" formControlName="dataFim" name="dataFim">
+                    <mat-hint></mat-hint>
+                    <mat-datepicker-toggle matIconSuffix [for]="picker3"></mat-datepicker-toggle>
+                    <mat-datepicker #picker3></mat-datepicker>
+                </mat-form-field>
+            </div>
+
+
+            <div class="form-group">
+                <hr>
+                <div style="float:left">
+                    <!-- I USE FORMS VALIDATIONS -->
+                    <button type="submit" class="btn btn-success">Gravar</button>
+                </div>
+                <div style="float:right">
+                    <button class="btn btn-warning" (click)="LimpaProjetoForms()">Limpar</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <!-- TABLE -->
+    <div [ngClass]="{'col-sm-8': projetoSelecionado, 'col-sm-12': !projetoSelecionado}">
+        <app-titulo [p_titulo_componente]="p_titulo_projeto">
+            <button class="btn btn-success" style="float:right" (click)="projetoNovo()">Novo Projeto</button>
+        </app-titulo>
+        <table class="table table-light table-hover">
+            <!-- <table class="table table-light"> -->
+            <thead class="table-primary">
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Data Inicio</th>
+                    <th scope="col">Data Prevista Fim</th>
+                    <th scope="col">Data Fim</th>
+                    <th scope="col">Descrição</th>
+                    <th scope="col">Status</th>
+                    <th scope="col">Orçamento</th>
+                    <th scope="col">Risco</th>
+                    <th scope="col">Gerente</th>
+                    <th scope="col">Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let v_projeto of oProjetos">
+                    <td scope="row">{{v_projeto.projetoId}}</td>
+                    <td>{{v_projeto.nome}}</td>
+                    <td>{{v_projeto.dataInicio}}</td>
+                    <td>{{v_projeto.dataPrevisaoFim}}</td>
+                    <td>{{v_projeto.dataFim}}</td>
+                    <td>{{v_projeto.descricao}}</td>
+                    <td>{{v_projeto.status}}</td>
+                    <td>{{v_projeto.orcamento}}</td>
+                    <td>{{v_projeto.risco}}</td>
+                    <td>{{v_projeto.pessoaId}}</td>
+                    <td>
+                        <button class="text-dark btn btn-sm btn-outline-warning"
+                            (click)="projetoSelected(v_projeto)">Detalhe</button>
+                        <button class="btn btn-sm btn-outline-danger"
+                            (click)="projetoExcluir(v_projeto)">Excluir</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

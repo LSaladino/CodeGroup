@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Oficinas\\CodeGroup\\PortifolioProjeto\\PP.Core\\PP.Core.csproj": {}
+    "C:\\Oficinas\\CodeGroup\\portifolioprojeto\\PP.Core\\PP.Core.csproj": {}
   },
   "projects": {
-    "C:\\Oficinas\\CodeGroup\\PortifolioProjeto\\PP.Core\\PP.Core.csproj": {
+    "C:\\Oficinas\\CodeGroup\\portifolioprojeto\\PP.Core\\PP.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Oficinas\\CodeGroup\\PortifolioProjeto\\PP.Core\\PP.Core.csproj",
+        "projectUniqueName": "C:\\Oficinas\\CodeGroup\\portifolioprojeto\\PP.Core\\PP.Core.csproj",
         "projectName": "PP.Core",
-        "projectPath": "C:\\Oficinas\\CodeGroup\\PortifolioProjeto\\PP.Core\\PP.Core.csproj",
+        "projectPath": "C:\\Oficinas\\CodeGroup\\portifolioprojeto\\PP.Core\\PP.Core.csproj",
         "packagesPath": "C:\\Users\\Luiz\\.nuget\\packages\\",
-        "outputPath": "C:\\Oficinas\\CodeGroup\\PortifolioProjeto\\PP.Core\\obj\\",
+        "outputPath": "C:\\Oficinas\\CodeGroup\\portifolioprojeto\\PP.Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

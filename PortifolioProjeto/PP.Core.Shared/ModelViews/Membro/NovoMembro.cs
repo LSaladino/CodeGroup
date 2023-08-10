@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace PP.Core.Shared.ModelViews.Membro
+﻿namespace PP.Core.Shared.ModelViews.Membro
 {
     public class NovoMembro
     {
+        //public int MembroId { get; set; }
+        public int pessoaId { get; set; }
     }
 }

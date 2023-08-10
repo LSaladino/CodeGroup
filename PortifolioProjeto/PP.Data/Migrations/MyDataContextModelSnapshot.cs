@@ -24,18 +24,15 @@ namespace PP.Data.Migrations
 
             modelBuilder.Entity("PP.Core.Domain.Membro", b =>
                 {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
+                    b.Property<int>("ProjetoId")
                         .HasColumnType("integer")
                         .HasColumnName("idprojeto");
-
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
                     b.Property<int>("PessoaId")
                         .HasColumnType("integer")
                         .HasColumnName("idpessoa");
 
-                    b.HasKey("Id")
+                    b.HasKey("ProjetoId")
                         .HasName("pk_membros_projeto");
 
                     b.HasIndex("PessoaId")
@@ -46,12 +43,12 @@ namespace PP.Data.Migrations
 
             modelBuilder.Entity("PP.Core.Domain.Pessoa", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("PessoaId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("integer")
                         .HasColumnName("id");
 
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("PessoaId"));
 
                     b.Property<string>("CPF")
                         .HasColumnType("text")
@@ -69,19 +66,20 @@ namespace PP.Data.Migrations
                         .HasColumnType("text")
                         .HasColumnName("nome");
 
-                    b.HasKey("Id");
+                    b.HasKey("PessoaId")
+                        .HasName("pk_pessoa");
 
                     b.ToTable("pessoa", (string)null);
                 });
 
             modelBuilder.Entity("PP.Core.Domain.Projeto", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("ProjetoId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("integer")
                         .HasColumnName("id");
 
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("ProjetoId"));
 
                     b.Property<DateTime>("DataFim")
                         .HasColumnType("timestamp with time zone")
@@ -119,10 +117,10 @@ namespace PP.Data.Migrations
                         .HasColumnType("text")
                         .HasColumnName("status");
 
-                    b.HasKey("Id");
+                    b.HasKey("ProjetoId")
+                        .HasName("pk_projeto");
 
-                    b.HasIndex("PessoaId")
-                        .IsUnique();
+                    b.HasIndex("PessoaId");
 
                     b.ToTable("projeto", (string)null);
                 });
@@ -135,16 +133,25 @@ namespace PP.Data.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("PP.Core.Domain.Projeto", "Projeto")
+                        .WithOne("Membro")
+                        .HasForeignKey("PP.Core.Domain.Membro", "ProjetoId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.Navigation("Pessoa");
+
+                    b.Navigation("Projeto");
                 });
 
             modelBuilder.Entity("PP.Core.Domain.Projeto", b =>
                 {
                     b.HasOne("PP.Core.Domain.Pessoa", "Pessoa")
-                        .WithOne("Projeto")
-                        .HasForeignKey("PP.Core.Domain.Projeto", "PessoaId")
+                        .WithMany("Projetos")
+                        .HasForeignKey("PessoaId")
                         .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .IsRequired()
+                        .HasConstraintName("fk_gerente");
 
                     b.Navigation("Pessoa");
                 });
@@ -153,7 +160,12 @@ namespace PP.Data.Migrations
                 {
                     b.Navigation("Membro");
 
-                    b.Navigation("Projeto");
+                    b.Navigation("Projetos");
+                });
+
+            modelBuilder.Entity("PP.Core.Domain.Projeto", b =>
+                {
+                    b.Navigation("Membro");
                 });
 #pragma warning restore 612, 618
         }

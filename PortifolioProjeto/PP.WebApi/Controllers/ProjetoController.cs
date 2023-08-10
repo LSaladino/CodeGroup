@@ -1,7 +1,12 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using AutoMapper;
+using Microsoft.AspNetCore.Mvc;
 using PP.Core.Domain;
+using PP.Core.Shared.ModelViews.Membro;
 using PP.Core.Shared.ModelViews.Projeto;
+using PP.Data.Repository;
 using PP.Manager.Interfaces.Managers;
+using PP.Manager.Interfaces.Repositories;
+using System.Data.SqlClient;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -12,10 +17,18 @@ namespace PP.WebApi.Controllers
     public class ProjetoController : ControllerBase
     {
         private readonly IProjetoManager _projetoManager;
+        private readonly IMembroRepository _membroRepository;   
+        private readonly IConfiguration _configuration;
+        private readonly IMapper _mapper;   
 
-        public ProjetoController(IProjetoManager projetoManager)
+        public ProjetoController(IProjetoManager projetoManager,
+            IMembroRepository membroRepository,
+            IConfiguration configuration,
+            IMapper mapper)
         {
             _projetoManager = projetoManager;
+            _membroRepository = membroRepository;
+            _configuration = configuration;
         }
 
         // GET: api/<ProjetoController>
@@ -50,6 +63,19 @@ namespace PP.WebApi.Controllers
         public async Task<IActionResult> Post(NovoProjeto novoProjeto)
         {
             var projetoInserido = await _projetoManager.InsertProjetoAsync(novoProjeto);
+            if (projetoInserido.ProjetoId > 0)
+            {
+
+                Membro membro = new Membro();
+                //membro.PessoaId = projetoInserido.PessoaId;
+
+                membro.PessoaId = projetoInserido.PessoaId;
+                membro.ProjetoId = projetoInserido.ProjetoId;
+
+
+                await _membroRepository.PostMembroAsynch(membro);
+
+            }
             return CreatedAtAction(nameof(Get), new { projetoId = projetoInserido.ProjetoId }, projetoInserido);    
         }
 

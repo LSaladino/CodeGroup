@@ -9,6 +9,8 @@ namespace PP.Manager.Interfaces.Managers
         Task<PessoaView> GetPessoaByIdAsync(int id);
 
         Task<IEnumerable<PessoaView>> GetPessoasAsync();
+        Task<IEnumerable<PessoaTwoFieldsView>> GetPessoasTwoFieldsAsync();
+        Task<PessoaTwoFieldsView> GetPessoasTwoFieldsByIdAsync(int id);
 
         Task<PessoaView> InsertPessoaAsync(NovaPessoa novaPessoa);
 

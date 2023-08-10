@@ -41,6 +41,32 @@ namespace PP.WebApi.Controllers
             return Ok(pessoa);
         }
 
+        [HttpGet("twofields")]
+        public async Task<IActionResult> GetTwoFields() 
+        {
+            var pessoa = await pessoaManager.GetPessoasTwoFieldsAsync();
+            if (pessoa.Any())
+            {
+                return Ok(pessoa);
+            }
+
+            return NotFound();
+
+        }
+
+        [HttpGet("twofieldsbyid/{id}")]
+        public async Task<IActionResult> GetTwoFieldsById(int id)
+        {
+            var pessoa = await pessoaManager.GetPessoasTwoFieldsByIdAsync(id);
+            if (pessoa.PessoaId == 0)
+            {
+                return NotFound();
+            }
+            
+            return Ok(pessoa);
+        }
+
+
         // POST api/<PessoaController>
         [HttpPost]
         public async Task<IActionResult> Post(NovaPessoa novaPessoa)

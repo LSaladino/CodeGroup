@@ -1,0 +1,128 @@
+<div class="row" style="margin-left: 2px;margin-right: 2px;">
+  <div class="col-sm-4" *ngIf="pessoaSelecionada">
+
+    <div class="row">
+      <div class="mr-auto">
+        <app-titulo
+          [p_titulo_componente]="pessoaSelecionada.pessoaId == 0 ? 'Nova pessoa': 'ID: '+ pessoaSelecionada.pessoaId + ' - ' + 'Nome: ' + pessoaSelecionada.nome"></app-titulo>
+      </div>
+      <div class="mt-1" style="text-align: right;">
+        <button class="btn btn-outline-danger" (click)="Voltar()">Fechar</button>
+      </div>
+    </div>
+
+    <form [formGroup]="frmPessoa" (ngSubmit)="EnviaPessoa()">
+
+      <!-- NOME -->
+      <div class="form-group">
+        <label for="lblNome">Nome</label>
+        <input type="text" class="form-control" formControlName="nome"
+          [ngClass]="{'is-invalid':p_submitted && frmPessoa.controls['nome'].errors}">
+
+        <div *ngIf="p_submitted && frmPessoa.controls['nome'].errors" class="text-danger">
+          <div *ngIf="p_submitted && frmPessoa.controls['nome'].errors['required']">
+            [Nome] é obrigatório !
+          </div>
+          <div *ngIf="p_submitted && frmPessoa.controls['nome'].errors['minlength']">
+            [Nome] deve ter no mínimo 10 caracteres !
+          </div>
+        </div>
+      </div>
+
+      <!-- CPF -->
+      <div class="form-group">
+        <label for="lblCpf" class="for">CPF</label>
+        <input type="text" class="form-control" formControlName="cpf" mask="00-000-000/0000-00"
+          [ngClass]="{'is-invalid':p_submitted && frmPessoa.controls['cpf'].errors}">
+
+        <div *ngIf="p_submitted && frmPessoa.controls['cpf'].errors" class="text-danger">
+
+          <div *ngIf="p_submitted && frmPessoa.controls['cpf'].errors['required']">
+            [CPF] é obrigatório
+          </div>
+          <div *ngIf="p_submitted && frmPessoa.controls['cpf'].errors['maxlength']">
+            [CPF] deve ter no máximo 11 caracteres !
+          </div>
+
+        </div>
+      </div>
+
+      <!-- DATA NASCIMENTO -->
+      <br>
+      <div class="form-group">
+        <mat-form-field color="accent" appearance="outline">
+          <mat-label>Data de nascimento ?</mat-label>
+          <input matInput [matDatepicker]="picker" formControlName="dataNascimento" name="dataNascimento">
+          <mat-hint></mat-hint>
+          <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+      </div>
+      <br>
+      <br>
+
+      <!-- FUNCIONARIO SIM OU NÃO ? -->
+
+      <div class="form-group">
+
+        <label for="lblisFuncionario" class="for">Funcionario ?</label>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="isFuncionario" id="Sim" [value]="true"
+            formControlName="isFuncionario">
+          <label for="lblMasculino" class="form-check-label">Sim</label>
+        </div>
+
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="isFuncionario" id="Não" [value]="false"
+            formControlName="isFuncionario">
+          <label for="lblFeminino" class="form-check-label">Não</label>
+        </div>
+
+      </div>
+
+      <div class="form-group">
+        <hr>
+        <div style="float:left">
+          <!-- I USE FORMS VALIDATIONS -->
+          <button type="submit" class="btn btn-success">Gravar</button>
+        </div>
+        <div style="float:right">
+          <button class="btn btn-warning" (click)="LimpaPessoaForms()">Limpar</button>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <!-- TABLE -->
+  <div [ngClass]="{'col-sm-8': pessoaSelecionada, 'col-sm-12': !pessoaSelecionada}">
+    <app-titulo [p_titulo_componente]="p_titulo_pessoa">
+      <button class="btn btn-success" style="float:right" (click)="pessoaNova()">Nova Pessoa</button>
+    </app-titulo>
+    <table class="table table-light table-hover">
+      <!-- <table class="table table-light"> -->
+      <thead class="table-primary">
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">Nome</th>
+          <th scope="col">CPF</th>
+          <th scope="col">Data Nascimento</th>
+          <th scope="col">Funcionario</th>
+          <th scope="col">Ações</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let v_pessoa of oPessoas">
+          <td scope="row">{{v_pessoa.pessoaId}}</td>
+          <td>{{v_pessoa.nome}}</td>
+          <td>{{v_pessoa.cpf}}</td>
+          <td>{{v_pessoa.dataNascimento}}</td>
+          <td>{{v_pessoa.isFuncionario}}</td>
+          <td>
+            <button class="text-dark btn btn-sm btn-outline-warning" (click)="pessoaSelected(v_pessoa)">Detalhe</button>
+            <button class="btn btn-sm btn-outline-danger" (click)="pessoaExcluir(v_pessoa)">Excluir</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

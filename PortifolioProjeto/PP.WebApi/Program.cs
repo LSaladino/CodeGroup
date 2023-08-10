@@ -23,6 +23,9 @@ builder.Services.AddScoped<IPessoaManager, PessoaManager>();
 builder.Services.AddScoped<IProjetoRepository, ProjetoRepository>();
 builder.Services.AddScoped<IProjetoManager, ProjetoManager>();
 
+builder.Services.AddScoped<IMembroRepository, MembroRepository>();
+builder.Services.AddScoped<IMembroManager, MembroManager>();
+
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
@@ -44,10 +47,13 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseHttpsRedirection();
+// app.UseHttpsRedirection();
 
 app.UseAuthorization();
 
 app.MapControllers();
+
+// ADD CORS POLITICS
+app.UseCors(c => c.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin());
 
 app.Run();
